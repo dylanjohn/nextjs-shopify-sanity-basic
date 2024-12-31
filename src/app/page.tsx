@@ -13,9 +13,6 @@ export default async function Home() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {products.map(({ node: product }) => (
           <div key={product.id} className="border rounded-lg p-4">
-            <pre className="bg-gray-100 p-2 mb-4 text-sm overflow-x-auto">
-              Product Handle: {product.handle}
-            </pre>
             <Link 
               href={`/products/${product.handle}`}
               className="block"
